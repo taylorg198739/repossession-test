@@ -13,7 +13,7 @@ export function DetailPage({id, isFetching, selectedData, fetchDetailData}) {
                 <>
                     <h2>{selectedData.title}</h2>
                     <div>
-                        Completed: <input type="checkbox" value={selectedData.completed} disabled />
+                        Completed: <input type="checkbox" checked={selectedData.completed} disabled />
                     </div>
                 </>
             )}
