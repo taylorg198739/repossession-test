@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { navigate } from 'hookrouter'
+import { PageWrapper, LoginWrapper } from './styles';
 
 const LoginPage = () => {
     const [username, setUsername] = useState("");
@@ -17,10 +18,13 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="d-flex justify-content-center mt-5">
-            <input value={username} className="input-form" placeholder="username" onKeyDown={handleKeyDown} onChange={(e) => setUsername(e.target.value)}></input>
-            <button onClick={handleSubmit}>submit</button>
-        </div>
+        <PageWrapper>
+            <LoginWrapper>
+                <input value={username} className="form-control" placeholder="username" onKeyDown={handleKeyDown} onChange={(e) => setUsername(e.target.value)}></input>
+                <button className="btn btn-primary" onClick={handleSubmit}>submit</button>
+            </LoginWrapper>
+        </PageWrapper>
+        
     )
 }
 

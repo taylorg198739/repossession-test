@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchDetailData } from '../../store/action/dataAction';
+import { DetailPageWrapper, Status } from './styles';
+import { Loader } from '../../components/loader';
+
 
 export function DetailPage({id, isFetching, selectedData, fetchDetailData}) {
     useEffect(() => {
@@ -8,16 +11,13 @@ export function DetailPage({id, isFetching, selectedData, fetchDetailData}) {
     }, [id, fetchDetailData]);
 
     return (
-        <div className="d-flex flex-column m-5">
-            {!isFetching && (
-                <>
-                    <h2>{selectedData.title}</h2>
-                    <div>
-                        Completed: <input type="checkbox" checked={selectedData.completed} disabled />
-                    </div>
-                </>
-            )}
-        </div>
+        <DetailPageWrapper>
+            <Loader loading={isFetching}>
+                <h2>{selectedData.title}</h2>
+                {selectedData.completed && <Status completed>Completed</Status>}
+                {!selectedData.completed && <Status>To Do</Status>}
+            </Loader>
+        </DetailPageWrapper>
     );
 }
 
