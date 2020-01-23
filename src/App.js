@@ -12,7 +12,7 @@ const routes = {
 
 const MyApp = () => {
   useEffect(() => {
-    const username = window.sessionStorage.getItem('username');
+    const username = window.localStorage.getItem('username');
     if (username) navigate('/')
     else navigate('/login') 
   }, [])

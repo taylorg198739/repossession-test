@@ -5,7 +5,7 @@ const LoginPage = () => {
     const [username, setUsername] = useState("");
     const handleSubmit = () => {
         if (username) {
-            window.sessionStorage.setItem('username', username);
+            window.localStorage.setItem('username', username);
             navigate('/')
         }
     }
