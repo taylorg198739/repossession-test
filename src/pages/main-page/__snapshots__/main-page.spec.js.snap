@@ -2,14 +2,14 @@
 
 exports[`it renders correctly 1`] = `
 <div
-  className="d-flex flex-column"
+  className="d-flex flex-column m-5"
 >
   <a
     href="/list-detail/102"
     onClick={[Function]}
   >
     102
-     
+    . 
     sed ab consequatur
   </a>
   <a
@@ -17,7 +17,7 @@ exports[`it renders correctly 1`] = `
     onClick={[Function]}
   >
     103
-     
+    . 
     sed ab consequatur
   </a>
   <a
@@ -25,7 +25,7 @@ exports[`it renders correctly 1`] = `
     onClick={[Function]}
   >
     104
-     
+    . 
     sed ab consequatur
   </a>
   <a
@@ -33,7 +33,7 @@ exports[`it renders correctly 1`] = `
     onClick={[Function]}
   >
     105
-     
+    . 
     sed ab consequatur
   </a>
 </div>
