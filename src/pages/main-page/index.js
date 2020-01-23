@@ -3,14 +3,14 @@ import { A } from 'hookrouter'
 import { connect } from 'react-redux';
 import { fetchListData } from '../../store/action/dataAction';
 
-export function MainPage(props) {
+export function MainPage({ fetchListData, listData, isFetching }) {
     useEffect(() => {
-        props.fetchListData();
-    }, []);
+        fetchListData();
+    }, [fetchListData]);
 
     return (
         <div className="d-flex flex-column">
-            {props.listData && props.listData.map((item, idx) => (
+            {!isFetching && listData.map((item, idx) => (
                 <A key={idx} href={`/list-detail/${item.id}`}>{item.id} {item.title}</A>
             ))}
         </div>
@@ -19,6 +19,7 @@ export function MainPage(props) {
 
 const mapStateToProps = (state) => {
     return {
+        isFetching: state.appData.isFetching,
         listData: state.appData.data
     }
 }
@@ -33,4 +34,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(MainPage)
-
