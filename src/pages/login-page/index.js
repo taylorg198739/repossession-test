@@ -3,7 +3,7 @@ import { navigate } from 'hookrouter'
 import { PageWrapper, LoginWrapper } from './styles';
 
 const LoginPage = () => {
-    const [username, setUsername] = useState("");
+    const [username, setUsername] = useState('');
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
@@ -24,7 +24,6 @@ const LoginPage = () => {
                 <button className="btn btn-primary" onClick={handleSubmit}>submit</button>
             </LoginWrapper>
         </PageWrapper>
-        
     )
 }
 

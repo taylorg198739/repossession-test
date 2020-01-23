@@ -5,7 +5,7 @@ import { fetchListData } from '../../store/action/dataAction';
 import { ListPageWrapper, ListView, Row } from './styles';
 import { Loader } from '../../components/loader';
 
-export function MainPage({ fetchListData, listData, isFetching }) {
+export const MainPage = ({ fetchListData, listData, isFetching }) => {
     useEffect(() => {
         fetchListData();
     }, [fetchListData]);

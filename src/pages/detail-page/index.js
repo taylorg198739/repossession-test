@@ -4,8 +4,7 @@ import { fetchDetailData } from '../../store/action/dataAction';
 import { DetailPageWrapper, Status } from './styles';
 import { Loader } from '../../components/loader';
 
-
-export function DetailPage({id, isFetching, selectedData, fetchDetailData}) {
+export const DetailPage = ({ id, isFetching, selectedData, fetchDetailData }) => {
     useEffect(() => {
         fetchDetailData(id);
     }, [id, fetchDetailData]);
