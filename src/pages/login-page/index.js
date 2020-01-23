@@ -11,8 +11,8 @@ const LoginPage = () => {
     }
 
     return (
-        <div>
-            <input value={username} onChange={(e) => setUsername(e.target.value)}></input>
+        <div className="d-flex justify-content-center mt-5">
+            <input value={username} placeholder="username" onChange={(e) => setUsername(e.target.value)}></input>
             <button onClick={handleSubmit}>submit</button>
         </div>
     )

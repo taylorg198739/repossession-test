@@ -9,9 +9,9 @@ export function MainPage({ fetchListData, listData, isFetching }) {
     }, [fetchListData]);
 
     return (
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column m-5">
             {!isFetching && listData.map((item, idx) => (
-                <A key={idx} href={`/list-detail/${item.id}`}>{item.id} {item.title}</A>
+                <A key={idx} href={`/list-detail/${item.id}`}>{item.id}. {item.title}</A>
             ))}
         </div>
     );

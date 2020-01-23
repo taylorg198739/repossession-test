@@ -8,7 +8,7 @@ export function DetailPage({id, isFetching, selectedData, fetchDetailData}) {
     }, [id, fetchDetailData]);
 
     return (
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column m-5">
             {!isFetching && (
                 <>
                     <h2>{selectedData.title}</h2>
