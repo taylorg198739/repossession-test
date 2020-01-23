@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+<div
+  className="d-flex flex-column"
+>
+  <a
+    href="/list-detail/102"
+    onClick={[Function]}
+  >
+    102
+     
+    sed ab consequatur
+  </a>
+  <a
+    href="/list-detail/103"
+    onClick={[Function]}
+  >
+    103
+     
+    sed ab consequatur
+  </a>
+  <a
+    href="/list-detail/104"
+    onClick={[Function]}
+  >
+    104
+     
+    sed ab consequatur
+  </a>
+  <a
+    href="/list-detail/105"
+    onClick={[Function]}
+  >
+    105
+     
+    sed ab consequatur
+  </a>
+</div>
+`;

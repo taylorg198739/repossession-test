@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useRoutes, navigate } from 'hookrouter';
+import MainPage from './pages/main-page';
+import DetailPage from './pages/detail-page';
+import LoginPage from './pages/login-page';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const routes = {
+  '/': () => <MainPage />,
+  '/login': () => <LoginPage />,
+  '/list-detail/:id': ({id}) => <DetailPage id={id} />
+};
+
+const MyApp = () => {
+  useEffect(() => {
+    const username = window.sessionStorage.getItem('username');
+    if (username) navigate('/')
+    else navigate('/login') 
+  }, [])
+  const routeResult = useRoutes(routes);
+
+  return routeResult;
 }
-
-export default App;
+export default MyApp
